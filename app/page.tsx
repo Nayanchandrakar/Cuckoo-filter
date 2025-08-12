@@ -69,17 +69,16 @@ export default function HomePage() {
               onChange={(e) => setInputValue(e.target.value)}
               placeholder="Enter your username here..."
             />
-            {inputValue ? (
-              <span
-                id="username-status"
-                className={cn("text-xs flex gap-1 items-center", status?.color)}
-              >
-                {status?.icon}
-                {status?.message}
-              </span>
-            ) : (
-              <span className="h-3.5" />
-            )}
+            <span
+              className={cn(
+                "text-xs flex invisible gap-1 items-center transition-all duration-400",
+                status?.color,
+                inputValue && "visible"
+              )}
+            >
+              {status?.icon}
+              {status?.message}
+            </span>
           </div>
         </div>
       </div>
