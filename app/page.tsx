@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils"
 
 const statusConfig = {
   pending: {
-    color: "text-yellow-500",
+    color: "text-white",
     icon: <Loader className="size-3 animate-spin" />,
     message: "Checking availability...",
   },
